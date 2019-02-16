@@ -23,7 +23,7 @@ class Student < ActiveRecord::Base
         if student.name.include?(name)
           search_results << student
         else
-          search_results << student.name
+          search_results << student
         end
       end
       return search_results
