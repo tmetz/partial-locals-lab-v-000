@@ -22,6 +22,8 @@ class Student < ActiveRecord::Base
       self.all.each do |student|
         if student.name.include?(name)
           search_results << student
+        else
+          search_results << student.name
         end
       end
       return search_results
