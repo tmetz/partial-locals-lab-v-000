@@ -20,7 +20,7 @@ class Student < ActiveRecord::Base
       return self.all
     else
       self.all.each do |student|
-        if student.name.include? name
+        if student.name.include?(name)
           search_results << student
         end
       end
