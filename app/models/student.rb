@@ -16,10 +16,15 @@ class Student < ActiveRecord::Base
 
   def self.search(name)
     search_results = []
-    self.all.each do |student|
-      if student.name.include? name
-        search_results << student
+    if name == ""
+      return self.all
+    else
+      self.all.each do |student|
+        if student.name.include? name
+          search_results << student
+        end
       end
+      return search_results
     end
   end
 end
