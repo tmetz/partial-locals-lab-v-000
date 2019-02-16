@@ -6,5 +6,5 @@ Classroom Info
 
 We now want to call out the oldest student in the class:
 <%= @classroom.students.each do |student| %>
-  <%= render partial 'students/student', locals: {student: student} %>
+  <%= render partial: 'students/student', locals: {student: student} %>
 <% end %>
